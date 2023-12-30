@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AspectViewController">
+    <children>
+      <TextField fx:id="inpFle" layoutX="100.0" layoutY="22.0" prefHeight="43.0" prefWidth="557.0" />
+      <Button fx:id="upLd" layoutX="709.0" layoutY="22.0" mnemonicParsing="false" onAction="#UploadAction" prefHeight="43.0" prefWidth="121.0" text="Upload">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="14.0" layoutY="32.0" text="Input File">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+        <TabPane layoutX="-6.0" layoutY="104.0" prefHeight="496.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="104.0">
+            <tabs>
+                <Tab text="3-Aspect">
+                    <content>
+                        <SplitPane dividerPositions="0.525" prefHeight="0.0" prefWidth="6.0">
+                            <items>
+                                  <TableView fx:id="table1" editable="true" prefHeight="421.0" prefWidth="739.0">
+                                      <columns>
+                              <TableColumn fx:id="t_Name" prefWidth="34.0" resizable="false" text="ID" />
+                                          <TableColumn fx:id="t_Length" prefWidth="100.00003051757812" text="t Length" />
+                                          <TableColumn fx:id="t_Speed" prefWidth="90.0" text="t Speed" />
+                                          <TableColumn fx:id="t_Deceleration" prefWidth="90.0" text="t deceleration" />
+                                          <TableColumn fx:id="overLap" prefWidth="90.0" text="OverLap" />
+                                          <TableColumn fx:id="sighting" prefWidth="90.0" text="Sighting" />
+                                          <TableColumn fx:id="signal_Spacing" prefWidth="107.0" text="Signal Spacing" />
+                                          <TableColumn fx:id="headway" prefWidth="40.0" text="Headway" />
+                                      </columns>
+                                      <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                      </columnResizePolicy>
+                                  </TableView>
+                                  <BarChart fx:id="barChart1" prefHeight="421.0" prefWidth="-38.0" title="Headways">
+                                      <xAxis>
+                                          <CategoryAxis label="Distance" side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                          <NumberAxis label="Time" side="LEFT" />
+                                      </yAxis>
+                                  </BarChart>
+                            </items>
+                        </SplitPane>
+                    </content>
+                </Tab>
+                <Tab text="4-Aspect">
+                    <content>
+                        <SplitPane dividerPositions="0.5408333333333334" prefHeight="160.0" prefWidth="200.0">
+                            <items>
+                                  <TableView fx:id="table2" prefHeight="421.0" prefWidth="355.0">
+                                      <columns>
+                              <TableColumn fx:id="t_Name2" prefWidth="34.0" resizable="false" text="ID" />
+                                          <TableColumn fx:id="t_Length2" prefWidth="145.0" text="t Length" />
+                                          <TableColumn fx:id="t_Speed2" prefWidth="90.0" text="t Speed" />
+                                          <TableColumn fx:id="t_Deceleration2" prefWidth="90.0" text="t deceleration" />
+                                          <TableColumn fx:id="overLap2" prefWidth="90.0" text="OverLap" />
+                                          <TableColumn fx:id="sighting2" prefWidth="90.0" text="Sighting" />
+                                          <TableColumn fx:id="signal_Spacing2" prefWidth="90.0" text="Signal Spacing" />
+                                          <TableColumn fx:id="headway2" prefWidth="90.0" text="Headway" />
+                                      </columns>
+                                      <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                      </columnResizePolicy>
+                                  </TableView>
+                                  <BarChart fx:id="barChart" prefHeight="421.0" prefWidth="839.0" title="Headways">
+                                      <xAxis>
+                                          <CategoryAxis label="Distance" side="BOTTOM" fx:id="xAxis" />
+                                      </xAxis>
+                                      <yAxis>
+                                          <NumberAxis label="Time" side="LEFT" />
+                                      </yAxis>
+                                  </BarChart>
+                            </items>
+                        </SplitPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>

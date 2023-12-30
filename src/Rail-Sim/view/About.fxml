@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="394.0" prefWidth="484.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="125.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rail Plan version 1.0 R9- 64bit" />
+      <ImageView fitHeight="102.0" fitWidth="92.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/images/apps-w250.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="125.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright (c) 2016 AIS Railway Pty Ldt" />
+      <Text layoutX="125.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Software Engineer : Waqas Akhtar" />
+      <Text layoutX="125.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Engineering Consultant : Muhammad Omer" />
+      <Text layoutX="125.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Other Contributers : -------" />
+      <Text layoutX="125.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact us">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Hyperlink layoutX="129.0" layoutY="217.0" text="www.aisrailway.com" />
+      <Hyperlink layoutX="127.0" layoutY="240.0" text="Frequently asked questions" />
+      <Text layoutX="125.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contributer" />
+   </children>
+</AnchorPane>
